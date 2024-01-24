@@ -1,8 +1,9 @@
 const asynchandler = require('express-async-handler')
-
+const databasecontact = require('../models/contactmodel')
 
 const GetContacts = asynchandler(async(req,res) => {
-   res.json({Message:"Get Request"})
+    const contacts = await databasecontact.find()
+   res.json(contacts)
 })
 const createContacts = asynchandler(async(req,res) => {
    
@@ -12,6 +13,12 @@ const createContacts = asynchandler(async(req,res) => {
         res.status(400)
         throw new Error("All Fields Are Mandatory")
     }
+
+    const contactmake = await databasecontact.create({
+        name,
+        email,
+        phone
+    })
     res.json({Message:"Created Contact"})
 
 
