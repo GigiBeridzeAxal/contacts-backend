@@ -2,7 +2,7 @@ const asynchandler = require('express-async-handler')
 
 
 const GetContacts = asynchandler(async(req,res) => {
-
+   res.json({Message:"Get Request"})
 })
 const createContacts = asynchandler(async(req,res) => {
    
