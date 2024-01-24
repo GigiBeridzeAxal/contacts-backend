@@ -12,6 +12,7 @@ const createContacts = asynchandler(async(req,res) => {
         res.status(400)
         throw new Error("All Fields Are Mandatory")
     }
+    res.json({Message:"Created Contact"})
 
 
 })
