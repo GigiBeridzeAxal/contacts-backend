@@ -4,7 +4,7 @@ const cors = require('cors')
 const express = require('express')
 const ConnectDb = require('./config/dbConnection')
 
-cors.use(cors({
+app.use(cors({
     origin:"*"
 }
 
