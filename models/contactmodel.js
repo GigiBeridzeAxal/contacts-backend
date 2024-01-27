@@ -5,11 +5,15 @@ const contactSchema = mongoose.Schema({
         type:String,
         required:[true, " PLease Add Contact Name"]
        },
-       email:{
+       lastname:{
         type:String,
         required:[true, " PLease Add Contact email adress"]
        },
        phone:{
+        type:String,
+        required:[true, " PLease Add Contact phone number"]
+       }
+       packet:{
         type:String,
         required:[true, " PLease Add Contact phone number"]
        }

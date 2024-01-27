@@ -7,7 +7,7 @@ const GetContacts = asynchandler(async(req,res) => {
 })
 const createContacts = asynchandler(async(req,res) => {
    
-    const {name, email, phone} = req.body
+    const {name, lastname, phone , packet} = req.body
 
     if(!name || !email || !phone){
         res.status(400)
@@ -16,8 +16,9 @@ const createContacts = asynchandler(async(req,res) => {
 
     const contactmake = await databasecontact.create({
         name,
-        email,
-        phone
+        lastname,
+        phone,
+        packet
     })
     res.json({Message:"Created Contact"})
 
