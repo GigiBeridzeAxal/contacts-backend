@@ -9,7 +9,7 @@ const createContacts = asynchandler(async(req,res) => {
    
     const {name, lastname, phone , packet} = req.body
 
-    if(!name || !email || !phone){
+    if(!name || !lastname || !phone || !packet ){
         res.status(400)
         throw new Error("All Fields Are Mandatory")
     }

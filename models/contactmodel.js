@@ -12,10 +12,10 @@ const contactSchema = mongoose.Schema({
        phone:{
         type:String,
         required:[true, " PLease Add Contact phone number"]
-       }
+       },
        packet:{
         type:String,
-        required:[true, " PLease Add Contact phone number"]
+        required:[true, " PLease Add Contact packet number"]
        }
        
 
