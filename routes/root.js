@@ -1,11 +1,13 @@
 const express = require('express')
 const router = express.Router()
-const {GetContacts,createContacts} = require('../controllers/contactController')
+const {GetContacts, deletecontact , Getblock , createContacts} = require('../controllers/contactController')
 
 
-router.route('/').get(GetContacts)
+router.route('/').post(GetContacts)
+router.route('/').get(Getblock)
 
-router.route('/').post(createContacts)
+router.route('/delete').post(deletecontact)
+router.route('/register').post(createContacts)
 
 
 
